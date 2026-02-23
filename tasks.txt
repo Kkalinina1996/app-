@@ -1,0 +1,104 @@
+//date time code moment
+
+const moment = require("moment");
+
+const now = moment().format("YYYY-MM-DD HH:mm:ss");
+
+console.log(now);
+
+terminal npm i moment // instal bibliotek 
+to the start terminal npm run dev 
+
+============================
+
+//shuffled numbers with lodesh 
+
+const _ = require("lodash");
+
+const number = [1, 2, 3, 4, 5];
+
+const shuffled = _.shuffle(number);
+
+console.log(shuffled)
+
+terminal npm i lodesh
+=======================
+for packe-yson :npm init -y
+(automaticly replace all questens )
+
+=====================
+//Axios 
+
+npm npm install axios
+
+1. Создайте новый проект:
+○ В терминале перейдите в каталог, где хотите создать проект.
+○ Выполните команду `npm init -y`, чтобы инициализировать новый проект с файлом `package.json`.
+2. Установите axios:
+○ Выполните команду `npm install axios`, чтобы установить библиотеку `axios`.
+Создайте файл для выполнения запроса:
+○ В корневом каталоге проекта создайте файл `axios-example.js`.
+Настройте axios для выполнения GETзапроса:
+○ Откройте файл `axios-example.js` в текстовом редакторе.
+○ Импортируйте модуль `axios`.
+○ Настройте GETзапрос к публичному API JSONPlaceholder
+3. (`https://jsonplaceholder.typicode.com/todos/1`). Выведите результат запроса в консоль.
+5. Запустите скрипт: в терминале выполните команду `node axios-example.js`, чтобы запустить скрипт и
+увидеть результат в консоли.
+В
+// Answer this tasks 
+
+const axios = require('axios');
+
+axios.get('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => {
+    console.log('Data:', response.data);
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+  });
+
+  Got it — here’s the async/await version (cleaner and more modern 👌).
+📄 axios-example.js
+
+
+const axios = require('axios');
+
+async function fetchTodo() {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
+    console.log('Data:', response.data);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+fetchTodo();
+
+===============
+
+//npm install dotenv
+
+const dotenv = require("dotenv");
+dotenv.config();
+
+console.log(process.env.API_KEY);
+
+console.log(process.env.PORT);
+
+================
+
+require("dotenv").config();
+const http = require("http");
+const port = process.env.PORT || 3333;
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("hello world");
+});
+server.listen(port, () => {
+  console.log(`Server is launched at http://localhost:${port}`);
+});
+
+
+===================

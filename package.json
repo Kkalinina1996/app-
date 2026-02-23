@@ -10,7 +10,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon posts.js",
+    "dev": "nodemon weather.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
